@@ -118,6 +118,12 @@ body{
     font-weight: 700;
     font-size: 15px;
     margin-bottom: 40px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.1em;
+    line-height: 16px;
 }
 footer{
     background-color: #21409a;
@@ -325,6 +331,7 @@ footer{
     margin-top: 30px;
     width: 793px;
     height: 400px;
+    object-fit: cover;
 }
 .full-news__col2{
     padding: 0 0 0 25px;
@@ -344,8 +351,8 @@ footer{
     transition: all .5s;
 }
 .other-new__img{
-    width: 132px;
-    height: 88px;
+    min-width: 132px;
+    max-height: 88px;
     border-radius: 10px;
     margin: 15px 15px 15px 0;
 }

@@ -26,7 +26,7 @@ Route::prefix('admin')->group (function () {
 });
 Route::prefix('/tin-tuc')->group (function () {
     Route::get('/', [NewsController::class, 'index'])->name('news');
-    Route::get('/chi-tiet', [NewsController::class, 'getNews'])->name('full-new');
+    Route::get('/chi-tiet-{id}', [NewsController::class, 'getNews'])->name('full-new');
 });
 Route::prefix('/san-pham')->group (function () {
     Route::get('/', [ProductController::class, 'index'])->name('products');

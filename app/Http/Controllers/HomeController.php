@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\News;
 
 use Illuminate\Http\Request;
 
@@ -11,6 +12,10 @@ class HomeController extends Controller
         
     }
     public function index(){
-        return view('home');
+        $news = News::select('id', 'news_title', 'news_date', 'news_img', 'news_content')
+    ->orderBy('id', 'desc')
+    ->take(8)
+    ->get();
+        return view('home', compact('news'));
     }
 }
