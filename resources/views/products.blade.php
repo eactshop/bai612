@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/product.css') }}">
 </head>
+
 <body>
     @include('blocks.header')
     @include('blocks.navbar')
@@ -26,104 +28,20 @@
         </div>
         <div class="container">
             <div class="row">
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product1.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product2.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product1.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product2.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product1.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product2.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product1.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product2.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product1.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product2.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product1.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product2.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product1.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product2.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product1.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product2.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product1.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
-              <a href="{{route('full-product') }}" class="col-2 ta-product__col">
-                <img src="{{ asset('assets/images/product2.jpg') }}" alt="" class="ta-product__img">
-                <div class="ta-product__name">Tên sản phẩm</div>
-                <div class="ta-product__price">100.000VND</div>
-              </a>
+                @foreach ($products as $item)
+                    <a href="{{ route('full-product', ['id' => $item['id']]) }}" class="col-2 ta-product__col">
+                      <img src="{{ asset('uploads/' . $item['img']) }}" alt="" class="ta-product__img">
+                      <div class="ta-product__name">{{ $item['name'] }}</div>
+                      <div class="ta-product__price">{{ $item['price'] }}</div>
+                  </a>
+                @endforeach
             </div>
-          </div>
+        </div>
     </div>
-    
+
     @include('blocks.footer')
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
+
 </html>

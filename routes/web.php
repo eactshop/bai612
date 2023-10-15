@@ -22,7 +22,15 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/gioi-thieu', [InfoController::class, 'index'])->name('info');
 
 Route::prefix('admin')->group (function () {
-    Route::get('/', [AdminController::class, 'index']);
+    Route::get('/', [AdminController::class, 'index'])->name('admin-login');
+    Route::get('/home', [AdminController::class, 'getHome'])->name('admin-home');
+    Route::post('/home', [AdminController::class, 'postAdmin'])->name('admin-home');
+    Route::get('/home/list-product', [AdminController::class, 'getProducts'])->name('admin-products');
+    Route::get('/home/product-add', [AdminController::class, 'getFormProductAdd'])->name('admin-products-add');
+    Route::post('/home/product-add', [AdminController::class, 'postFormProductAdd'])->name('admin-products-add');
+    Route::get('/home/new-add', [AdminController::class, 'getFormNewAdd'])->name('admin-news-add');
+    Route::post('/home/new-add', [AdminController::class, 'postFormNewAdd'])->name('admin-news-add');
+    Route::get('/home/list-new', [AdminController::class, 'getNews'])->name('admin-news');
 });
 Route::prefix('/tin-tuc')->group (function () {
     Route::get('/', [NewsController::class, 'index'])->name('news');
@@ -30,5 +38,9 @@ Route::prefix('/tin-tuc')->group (function () {
 });
 Route::prefix('/san-pham')->group (function () {
     Route::get('/', [ProductController::class, 'index'])->name('products');
-    Route::get('/chi-tiet', [ProductController::class, 'getProduct'])->name('full-product');
+    Route::get('/chi-tiet-{id}', [ProductController::class, 'getProduct'])->name('full-product');
 });
+
+Route::get('/change-locale/{locale}', 'LocalizationController@changeLocale')->name('change.locale');
+
+

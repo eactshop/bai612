@@ -7,7 +7,7 @@
         <input class="search-btn" type="button" value="Tìm kiếm">
     </form>
     <div class="translate">
-        <a href="#" class="translate translate-vn">VN /</a>
-        <a href="#" class="translate translate-en">EN</a>
+        <a href="{{ route('change.locale', 'vn') }}" class="translate translate-vn">VN /</a>
+        <a href="{{ route('change.locale', 'en') }}" class="translate translate-en">EN</a>
     </div>
 </header>

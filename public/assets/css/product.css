@@ -36,6 +36,8 @@
 }
 .ta-product__img{
     max-width: 150px;
+    height: 150px;
+    object-fit: contain;
 }
 .ta-product__col{
     width: 199px;
@@ -46,6 +48,11 @@
     color: #21409a;
     border-radius: 10px;
     box-shadow: 0 4px 5px rgba(0,0,0,.04);
+}
+.ta-product__col:hover{
+    transform: translateY(-5px);
+    transition: all .5s;
+    border: 1px solid #21409a;
 }
 .ta-product__name{
     margin: 30px 0 15px 0;
@@ -69,6 +76,7 @@
     padding: 100px;
     margin-right: 100px;
     border-right: 1px solid #ddd;
+    object-fit: contain;
 }
 .full-product__text{
     padding: 50px 0;
@@ -88,7 +96,7 @@
 }
 .fp-info__title{
     background-color: #E6EAF6;
-    padding: 5px 100px 5px 10px;
+    padding: 5px 10px 5px 10px;
     border-left: 5px solid #21409a;
     color: #21409a;
     font-weight: 700;

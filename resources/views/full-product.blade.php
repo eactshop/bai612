@@ -16,31 +16,23 @@
     @include('blocks.navbar')
     <div class="ta-full__product">
         <div class="full-product__description">
-            <img src="{{ asset('assets/images/product2.jpg') }}" alt="" class="full-product__img">
+            <img src="{{ asset('uploads/' . $product->img) }}" alt="" class="full-product__img">
             <div class="full-product__text">
-                <div class="full-product__name">Bộ Lau Nhà 9 Lít - Tím</div>
-                <div class="full-product__price">100.000VND</div>
+                <div class="full-product__name">{{ $product->name }}</div>
+                <div class="full-product__price">{{ $product->price }}</div>
                 <div class="full-product__info">
                     <div class="fp-info__title">Thông tin sản phẩm</div>
                     <div class="fp-info__db">
                         <div class="fp-info__description">Đơn vị:</div>
-                        <span>Cái</span>
+                        <span>{{ $product->don_vi }}</span>
                     </div>
                     <div class="fp-info__db">
                         <div class="fp-info__description">Kích thước:</div>
-                        <span>47 x 29 x 31 cm</span>
-                    </div>
-                    <div class="fp-info__db">
-                        <div class="fp-info__description">Qui cách:</div>
-                        <span>1 Cái/Kiện</span>
-                    </div>
-                    <div class="fp-info__db">
-                        <div class="fp-info__description">Nguyên liệu:</div>
-                        <span>PP</span>
+                        <span>{{ $product->kich_thuoc }}</span>
                     </div>
                     <div class="fp-info__db">
                         <div class="fp-info__description">Màu sắc:</div>
-                        <span>Dương, Tím, Xám, Lá</span>
+                        <span>{{ $product->mau_sac }}</span>
                     </div>
                     <div class="mgt-20 fp-info__title">Thông tin mua hàng</div>
                     <button class="fp-info__btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
@@ -92,43 +84,20 @@
             <div class="arrange shadow-sm">
                 <div class="arrange-title">Sắp xếp</div>
                 <a class="arrange-link acctive" href="">Mới nhất</a>
-                <a class="arrange-link" href="">Cũ nhất</a>
+                {{-- <a class="arrange-link" href="">Cũ nhất</a>
                 <a class="arrange-link" href="">Giá: Thấp - Cao</a>
-                <a class="arrange-link" href="">Giá: Cao - Thấp</a>
+                <a class="arrange-link" href="">Giá: Cao - Thấp</a> --}}
             </div>
         </div>
         <div class="container">
             <div class="row">
-                <a href="#" class="col-2 ta-product__col">
-                    <img src="{{ asset('assets/images/product1.jpg') }}" alt="" class="ta-product__img">
-                    <div class="ta-product__name">Tên sản phẩm</div>
-                    <div class="ta-product__price">100.000VND</div>
+                @foreach ($other_product as $item)
+                  <a href="{{ route('full-product', ['id' => $item['id']]) }}" class="col-2 ta-product__col">
+                    <img src="{{ asset('uploads/' . $item['img']) }}" alt="" class="ta-product__img">
+                    <div class="ta-product__name">{{ $item['name'] }}</div>
+                    <div class="ta-product__price">{{ $item['price'] }}</div>
                 </a>
-                <a href="#" class="col-2 ta-product__col">
-                    <img src="{{ asset('assets/images/product2.jpg') }}" alt="" class="ta-product__img">
-                    <div class="ta-product__name">Tên sản phẩm</div>
-                    <div class="ta-product__price">100.000VND</div>
-                </a>
-                <a href="#" class="col-2 ta-product__col">
-                    <img src="{{ asset('assets/images/product1.jpg') }}" alt="" class="ta-product__img">
-                    <div class="ta-product__name">Tên sản phẩm</div>
-                    <div class="ta-product__price">100.000VND</div>
-                </a>
-                <a href="#" class="col-2 ta-product__col">
-                    <img src="{{ asset('assets/images/product2.jpg') }}" alt="" class="ta-product__img">
-                    <div class="ta-product__name">Tên sản phẩm</div>
-                    <div class="ta-product__price">100.000VND</div>
-                </a>
-                <a href="#" class="col-2 ta-product__col">
-                    <img src="{{ asset('assets/images/product1.jpg') }}" alt="" class="ta-product__img">
-                    <div class="ta-product__name">Tên sản phẩm</div>
-                    <div class="ta-product__price">100.000VND</div>
-                </a>
-                <a href="#" class="col-2 ta-product__col">
-                    <img src="{{ asset('assets/images/product2.jpg') }}" alt="" class="ta-product__img">
-                    <div class="ta-product__name">Tên sản phẩm</div>
-                    <div class="ta-product__price">100.000VND</div>
-                </a>
+                @endforeach
             </div>
         </div>
     </div>

@@ -23,7 +23,7 @@
                 </div>
                 <div class="full-new__description">
                     <span class="fn-des__text">{{ $news->news_content }}</span>
-                    <img src="{{ asset('assets/images/' . $news->news_img) }}" alt="" class="fn-des__img">
+                    <img src="{{ asset('uploads/' . $news->news_img) }}" alt="" class="fn-des__img">
                 </div>
             </div>
             <div class="col-4 full-news__col2">
@@ -31,7 +31,7 @@
                     <h1 class="other-new__title">Tin tức khác</h1>
                     @foreach($other_news as $item)
                     <a href="{{ route('full-new', ['id' => $item['id']]) }}" class="other-new">
-                        <img src="{{ asset('assets/images/' . $item['news_img']) }}" alt="" class="other-new__img">
+                        <img src="{{ asset('uploads/' . $item['news_img']) }}" alt="" class="other-new__img">
                         <div class="other-new__des">
                             <div class="other-new__time">{{ $item['news_date'] }}</div>
                             <h1 class="other-new__text">{{ $item['news_title'] }}</h1>
